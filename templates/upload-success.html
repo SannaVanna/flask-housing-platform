@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="upload-success">
+    <div class="form-container">
+        <h2>Upload Successful!</h2>
+        <p>Your file has been uploaded successfully.</p>
+        <!--img class="uploaded-image" src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded File"-->
+        <p>File uploaded successfully: <a href="{{ url_for('static', filename='uploads/' + filename) }}" target="_blank">View file</a></p>
+    </div>
+</div>
+{%endblock%}

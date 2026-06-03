@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Real Estate Portfolio{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='scripts.js') }}" >
+</head>
+<body>
+    <header>
+        <div class="logo">RENO <span>Homes</span></div>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('submit') }}">Contact Us</a></li>
+                <!--li><a href="{{ url_for('submit') }}">Location</a></li-->
+                <li><a href="{{ url_for('submit') }}">Support</a></li>
+            </ul>    
+            <!--a href="{{ url_for('upload_form') }}">Upload</a-->
+        </nav>
+        <div class="cta">
+            <a href="#" class="btn1">Try Now</a>
+        </div>
+    </header>
+    <div class="content">
+        <!--h1>Welcome To RENO Housing Platform.</h1>
+        <h1>Finding Your New Home is Simple</h1-->
+        {% block content %} {% endblock %}
+        <footer>
+            <p>&copy; All rights reserved 2025</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

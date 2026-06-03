@@ -1,0 +1,41 @@
+<!--DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Flask Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <h1>Welcome to my flask app feel free to explore.</h1>
+    <p>This is a styled page using a static css file.</p>
+    <a href="{{ url_for('about') }}">About</a>
+    <a href="{{ url_for('contact') }}">Contact Us</a>
+</body>
+</html-->
+{% extends "base.html" %}
+{% block title %}Home{%  endblock%}
+{% block content %}
+    <body id="home-page">
+        <video autoplay muted loop id="bgVideo">
+            <source src="static/video/house.mp4" type="video/mp4">
+        </video>
+        <h1>Welcome To </h1>        
+        <h1>RENO Housing Platform.</h1>
+        <h1>Finding Your New Home is Simple</h1>
+        <h2>Modern Family Housing.</h2>
+        <div class="search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" placeholder="Search....."/>
+      </div>
+        <!--div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div-->
+        <h3>Discover your perfect home from RENO Housing Platform.</h3>
+        <p>Beautiful home located in a peaceful environment.</p>
+    </body>
+{% endblock %}

@@ -1,0 +1,46 @@
+<!--DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <h1>Contact us, share your complaint with us.</h1>
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('about') }}">About</a>
+    <p>Contact us here and share your complaint with us.</p>
+        <div class="contact-info">
+            <p>You can message us on <strong>Facebook</strong>: <a href="https://facebook.com/YourPage" target="_blank">@RENO HOMES</a></p>
+            <p>Follow us on <strong>Instagram</strong>: <a href="https://instagram.com/yourhandle" target="_blank">@RENO_HOMES35</a></p>
+            <p>Chat with us on <strong>WhatsApp</strong>: <a href="https://wa.me/2348012345678" target="_blank">+234 801 234 5678</a></p>
+            <p> <strong>Email</strong> us on: <a href="mailto:contact@example.com">renohomes@gmail.com</a></p>
+        </div>
+</body>
+</html-->
+    {% extends "base.html" %}
+
+    {% block title %}Contact Us - My Site{% endblock %}
+
+    {% block content %}
+    <body id="contact-page">
+        <div class="form-container">
+            <h2>Contact Us</h2>
+            <form action="{{ url_for('submit') }}" method="POST">
+                <label>Name:</label><br>
+                <input type="text" name="name" placeholder="Enter full name"><br><br>
+
+                <label>Email:</label><br>
+                <input type="email" name="email" placeholder="example@email.com"><br><br>
+
+                <label>Address:</label><br>
+                <input type="text" name="address" placeholder="Enter your address"><br><br>
+
+                <label>Message:</label><br>
+                <textarea name="message" rows="5" required></textarea><br><br>
+                <button type="submit">Send</button>
+                <a href="{{ url_for('upload_form') }}">Upload a File</a>
+            </form>
+        </div>
+    </body>
+    {% endblock %}
