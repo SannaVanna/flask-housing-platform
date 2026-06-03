@@ -1,50 +1,88 @@
 # Flask-housing-platform
 Housing Platform Website (First Flask Project)
 
-This is my first-ever Flask project built during my early learning stage of backend web development.
+This is my first Flask web development project, created to learn the fundamentals of backend web development using Python and Flask.
 
 # Overview
 
-The project is a simple housing-themed web application built using Python Flask. It was created to understand the fundamentals of backend development, routing, form handling, file uploads, and database integration.
+The project is a housing-themed web application that demonstrates core Flask concepts, including routing, form handling, image uploads, database integration, and template rendering.
 
-It is not a production-level application but a beginner project focused on learning core concepts of Flask.
+The application includes a homepage, an about page, a contact form, image upload functionality, and a page for viewing uploaded images.
 
 # Features
 
-- Basic homepage with navigation layout
-- Search bar UI design (frontend only)
-- Contact form implementation
+- Homepage with navigation links
+- Search bar user interface
+- About page
+- Contact form submission
 - Image upload functionality
-- Success message after form submission
-- Page to display uploaded image
-- Basic database integration to store submitted data
-- Flask routing between pages
+- Success message after upload
+- View uploaded images
+- Database integration
+- Flask routing and template rendering
 
 # Technologies Used
 
 - Python
 - Flask
-- HTML
-- CSS
-- SQLite (or your actual DB if different)
-- Jinja2 Templates
+- HTML5
+- CSS3
+- SQLite
+- Jinja2
+
+# Project Structure
+
+project/
+│
+├── app.py
+├── requirements.txt
+├── Procfile
+├── .gitignore
+│
+├── static/
+│   ├── css/
+│   └── uploads/
+│
+├── templates/
+│   ├── index.html
+│   ├── about.html
+│   ├── contact.html
+│   ├── success.html
+│   └── view_image.html
+│
+└── database.db
+
+Deployment Files
+
+requirements.txt
+
+Contains the Python packages required to run the application.
+
+# Procfile
+
+Used for deployment with platforms such as Heroku and specifies the application's startup command.
+
+Example:
+
+web: gunicorn app:app
+
+.gitignore
+
+Prevents unnecessary files and folders from being tracked by Git.
 
 # What I Learned
 
-- How Flask routing works
-- How to create and handle forms in Flask
-- How file uploads work in a web application
-- How to connect a database to a Flask app
-- How frontend and backend communicate
-- Basic project structure in Flask
+- Flask application structure
+- Routing and URL handling
+- Form processing
+- File uploads
+- Database integration
+- Template rendering with Jinja2
+- Basic deployment preparation
 
 # Project Status
 
-This is a beginner learning project and may not include advanced features such as authentication, advanced UI design, or full production-level architecture.
-
-Why I Built This
-
-I built this project as my first step into backend web development to understand how real web applications work behind the scenes using Flask.
+Completed as a beginner learning project to practice Flask web development fundamentals.
 
 # Author
 Rita Okam
