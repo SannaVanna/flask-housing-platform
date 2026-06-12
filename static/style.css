@@ -261,9 +261,9 @@
         margin-top:50px;
         color:#111;
     }
-    #submit h2{
+    #submit h2, p{
         margin-bottom:10px;
-        color:#111;
+        color:white;
     }
     .content{
         text-align:center;
